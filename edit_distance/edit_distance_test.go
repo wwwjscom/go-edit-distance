@@ -21,6 +21,7 @@ var testCases = []struct {
 	{"a", "", 1},
 	{"aa", "a", 1},
 	{"aaa", "a", 2},
+	{"a.aa$ ", "a", 5},
 }
 
 func TestLevenshtein(t *testing.T) {

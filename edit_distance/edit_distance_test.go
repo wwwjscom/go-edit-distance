@@ -1,7 +1,6 @@
-package levenshtein_test
+package edit_distance
 
 import (
-	"golang-levenshtein/levenshtein"
 	"testing"
 )
 
@@ -26,10 +25,10 @@ var testCases = []struct {
 
 func TestLevenshtein(t *testing.T) {
 	for _, testCase := range testCases {
-		distance := levenshtein.DistanceForStrings(
+		distance := DistanceForStrings(
 				[]rune(testCase.source),
 				[]rune(testCase.target),
-				levenshtein.DefaultOptions)
+				DefaultOptions)
 		if distance != testCase.distance {
 			t.Log(
 					"Distance between",

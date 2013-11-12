@@ -1,4 +1,4 @@
-package levenshtein
+package edit_distance
 
 import (
 	"fmt"
